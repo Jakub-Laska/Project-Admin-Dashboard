@@ -28,7 +28,7 @@
 #nav #logo:hover,
 #nav li:hover,
 #header input:hover,
-#header-main img:hover {
+#header-main-left img:hover {
     opacity: .5;
     cursor: pointer;
     transform: scale(1.05);
@@ -60,19 +60,22 @@
     background-color: var(--color-white-primary);
     height: 200px;
 }
-#header-main {
+#header-main-left {
     background-color: var(--color-white-primary);
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2vw;
     padding: var(--padding);
+    align-items: center;
 }
 #header input {
     background-color: var(--color-white-secondary);
     border-radius: var(--padding);
     border: 1px solid var(--color-primary);
+    color: black;
+    padding: var(--padding);
 }
-#header-secondary {
+#header-secondary-left {
     background-color: blue;
     grid-area: 2 / 1 / 2 / 1;
 }
