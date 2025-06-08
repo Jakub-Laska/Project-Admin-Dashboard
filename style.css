@@ -14,7 +14,8 @@
     font-family: "Inter", sans-serif;
 
     display: grid;
-    grid-template: 1fr 1fr 3fr 1fr / 1fr 4fr;
+    grid-template: 1fr 3fr / 1fr 4fr;
+    background-color: var(--color-white-primary);
 }
 #nav {
     display: grid;
@@ -30,8 +31,7 @@
 #header input:hover,
 #header-main-left img:hover,
 #header-main-right > *:hover,
-#header-secondary-left button:hover,
-#header-secondary-right button:hover {
+#header-secondary-left button:hover {
     opacity: .5;
     cursor: pointer;
     transform: scale(1.05);
@@ -59,10 +59,11 @@
 }
 #header {
     display: grid;
-    grid-template: 1fr 2fr / 2fr 1fr;
+    grid-area: 1 / 2 / 2 / 2;
+    grid-template: 1fr 1fr / 2fr 1fr;
     background-color: var(--color-white-primary);
-    height: 200px;
     color: black;
+    box-shadow: 4px 4px 10px rgb(119, 119, 119);
 }
 #header-main-left {
     background-color: var(--color-white-primary);
@@ -125,4 +126,50 @@
     padding: 1vw 2vw;
     border-radius: 2rem;
     width: 10vw;
+}
+#header-secondary-right button:hover {
+    opacity: 1;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#main {
+    display: grid;
+    grid-area: 2 / 2 / -1 / 2;
+    grid-template: 1fr / 3fr 1fr;
+    background-color: var(--color-white-secondary);
+    margin-top: 10px;
+    color: #000000;
+    overflow-x: hidden;
+}
+#main-left {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2vw;
+    padding: var(--padding);
+}
+#main-cards p {
+    font-weight: 900;
+    font-size: 1rem;
+} 
+#main-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#main-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fiLL, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+}
+.card {
+    background-color: var(--color-white-primary);
+    padding: var(--padding);
+    border-left: 1vw solid var(--color-secondary);
+    border-radius: 1rem;
+}
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border-left: 1vw solid var(--color-primary);
 }
