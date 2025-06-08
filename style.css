@@ -28,7 +28,8 @@
 #nav #logo:hover,
 #nav li:hover,
 #header input:hover,
-#header-main-left img:hover {
+#header-main-left img:hover,
+#header-main-right > *:hover {
     opacity: .5;
     cursor: pointer;
     transform: scale(1.05);
@@ -45,7 +46,7 @@
     width: 1.5vw;
     height: auto;
 }
-#logo-img {
+.main-icon {
     width: 3vw;
     height: auto;
 }
@@ -59,6 +60,7 @@
     grid-template: 1fr 2fr / 2fr 1fr;
     background-color: var(--color-white-primary);
     height: 200px;
+    color: black;
 }
 #header-main-left {
     background-color: var(--color-white-primary);
@@ -72,8 +74,22 @@
     background-color: var(--color-white-secondary);
     border-radius: var(--padding);
     border: 1px solid var(--color-primary);
-    color: black;
+    color: #000000;
+    padding: 1vw;
+}
+#header-main-right {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
     padding: var(--padding);
+    gap: 2vw;
+}
+#header-main-right button {
+    background-color: var(--color-white-secondary);
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    overflow: hidden;
 }
 #header-secondary-left {
     background-color: blue;
