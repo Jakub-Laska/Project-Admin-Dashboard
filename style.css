@@ -30,7 +30,8 @@
 #header input:hover,
 #header-main-left img:hover,
 #header-main-right > *:hover,
-#header-secondary-left button:hover {
+#header-secondary-left button:hover,
+#header-secondary-right button:hover {
     opacity: .5;
     cursor: pointer;
     transform: scale(1.05);
@@ -99,7 +100,6 @@
 #header-secondary-left {
     grid-area: 2 / 1 / 2 / 1;
     grid-template-columns: auto 1fr;
-    gap: 2vw;
     font-weight: bold;
 }
 #header-secondary-left button {
@@ -111,4 +111,18 @@
 }
 #header-secondary-left p {
     font-size: 2vw;
+}
+#header-secondary-right {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    padding: var(--padding);
+    gap: 2vw;
+}
+#header-secondary-right button {
+    background-color: var(--color-secondary);
+    color: var(--color-white-primary);
+    padding: 1vw 2vw;
+    border-radius: 2rem;
+    width: 10vw;
 }
